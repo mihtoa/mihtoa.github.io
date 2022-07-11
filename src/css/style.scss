@@ -16,26 +16,9 @@ a {
   color: inherit;
   text-decoration: none;
   transition: 300ms ease;
+
   &:hover {
     color: $Orange;
-  }
-}
-
-.ball-detail {
-  margin-right: 7px;
-  width: 7px;
-  height: 12px;
-  display: inline-block;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 100%;
-    width: 7px;
-    height: 7px;
-    background: $Orange;
   }
 }
 
@@ -53,15 +36,18 @@ a {
   padding-top: 120px;
   padding-right: 20px;
   padding-left: 20px;
+
   .block-infos {
     width: 650px;
     background: #fff;
     position: relative;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.27);
-    border-radius: 10px;
+    border-radius: 20px;
+
     @media (max-width: 767px) {
       width: auto;
     }
+
     .photo {
       position: absolute;
       left: 50%;
@@ -70,6 +56,7 @@ a {
       padding: 10px;
       background: #fff;
       border-radius: 100%;
+
       img {
         max-width: 200px;
         display: block;
@@ -78,41 +65,57 @@ a {
         overflow: hidden;
       }
     }
+
     .description {
       padding: 80px 50px 50px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+
       @media (max-width: 767px) {
         flex-direction: column;
         text-align: center;
         padding-top: 120px;
       }
+
       .resume {
         @media (max-width: 767px) {
           margin: 15px;
         }
+
+        .logo {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
         .title {
-          margin: 15px 0;
+          margin-top: 15px;
           font-size: 15px;
           font-weight: 200;
+          opacity: 0.75;
         }
+
         .curriculum {
           text-transform: uppercase;
           letter-spacing: 1.5px;
+
           i {
             font-size: 15px;
           }
         }
       }
+
       .social {
         text-align: right;
+
         @media (max-width: 767px) {
           text-align: center;
         }
+
         .wrapper-social {
           margin-bottom: 15px;
+
           a {
             background: $Light;
             border-radius: 100%;
@@ -121,13 +124,17 @@ a {
             width: 40px;
             height: 40px;
             text-align: center;
+
             i {
               font-size: 20px;
               line-height: 35px;
             }
           }
         }
+
         .email {
+          color: $Orange;
+
           &::after {
             content: 'mitoe\40live.com';
           }
@@ -135,11 +142,12 @@ a {
       }
     }
   }
+
   .footer {
     color: white;
     padding: 8px;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     letter-spacing: 1px;
   }
