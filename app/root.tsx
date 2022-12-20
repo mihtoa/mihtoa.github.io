@@ -8,11 +8,11 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from "~/styles/global.css";
+import styles from "../styles/global.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Milene Toazza",
+  title: "Windows 95",
   viewport: "width=device-width,initial-scale=1",
 });
 
