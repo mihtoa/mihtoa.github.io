@@ -1,25 +1,36 @@
 {
   "name": "mihtoa.github.io",
-  "version": "1.0.0",
-  "description": "Personal Website",
-  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mihtoa/mihtoa.github.io.git"
   },
   "author": "Milene Toazza",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mihtoa/mihtoa.github.io/issues"
-  },
-  "homepage": "https://github.com/mihtoa/mihtoa.github.io#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-csso": "^3.0.1",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.53.0"
-  },
+  "private": true,
+  "sideEffects": false,
   "scripts": {
-    "dev": "gulp default"
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.9.0",
+    "@remix-run/react": "^1.9.0",
+    "@remix-run/serve": "^1.9.0",
+    "isbot": "^3.6.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.9.0",
+    "@remix-run/eslint-config": "^1.9.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "eslint": "^8.27.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
