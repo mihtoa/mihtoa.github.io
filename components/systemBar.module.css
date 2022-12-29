@@ -1,0 +1,13 @@
+.system-bar {
+  background-color: var(--color-gray);
+  min-height: 2rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: #f7f7f7 inset 0px 3px 1px;
+}
+
+.image {
+  margin-right: 5px;
+}

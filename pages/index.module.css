@@ -1,0 +1,15 @@
+.window {
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  left: 30%;
+  transform: translateY(40%);
+}
+
+@media (max-width: 500px) {
+  .window {
+    width: 80%;
+    left: 10%;
+    transform: translateY(30%);
+  }
+}

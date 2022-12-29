@@ -1,0 +1,18 @@
+.desktop {
+  background-color: var(--color-green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.desktop > * {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: min-content;
+  grid-gap: 1rem;
+}
