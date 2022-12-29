@@ -22,9 +22,18 @@ body {
   color: #333;
 }
 
+main {
+  min-height: 100vh;
+  position: relative;
+}
+
 img {
   max-width: 100%;
   display: block;
+}
+
+ul li {
+  list-style: none;
 }
 
 button {

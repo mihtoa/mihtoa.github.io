@@ -1,0 +1,10 @@
+.figure {
+  width: 80px;
+  color: white;
+}
+
+.image {
+  margin: 0 auto;
+  pointer-events: none;
+  margin-bottom: 5px;
+}
