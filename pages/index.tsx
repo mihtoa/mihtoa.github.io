@@ -1,10 +1,11 @@
-import { Button, GroupBox, Window, WindowHeader, WindowContent, Toolbar } from 'react95'
 import Head from 'next/head'
-import SystemBar from '../components/systemBar'
-import Desktop from '../components/desktop'
-import Icon from '../components/icon'
+import { Button, Frame, GroupBox, Window, WindowHeader, WindowContent, TextInput, Toolbar } from 'react95'
 
-import styles from './index.module.css'
+import SystemBar from 'components/systemBar'
+import Desktop from 'components/desktop'
+import Icon from 'components/icon'
+
+import styles from './Home.module.css'
 
 export default function Home() {
   return (
@@ -18,12 +19,38 @@ export default function Home() {
       <main>
         <Desktop>
           <div>
-            <Icon icon="/images/icons/my-computer.png" title="My Computer" />
+            <Icon icon="/images/my-computer.png" title="My Computer" />
+            <Icon icon="/images/recycle-bin.png" title="Recycle Bin" />
           </div>
         </Desktop>
-        <Window shadow={false} className={styles.window}>
+        <Window shadow={false} className={styles.notepad}>
           <WindowHeader>
-            <span>resume.exe</span>
+            <span>Resume - Notepad</span>
+          </WindowHeader>
+          <Toolbar>
+            <Button variant="menu" size="sm" disabled>
+              File
+            </Button>
+            <Button variant="menu" size="sm" disabled>
+              Edit
+            </Button>
+            <Button variant="menu" size="sm" disabled>
+              Save
+            </Button>
+          </Toolbar>
+          <TextInput
+            multiline
+            rows={6}
+            defaultValue={`Milene Toazza\nFrontend Developer from Brazil since 2018\nSoftware Engineer student (2020 - 2024)\n\nText here!`}
+            fullWidth
+          />
+          <Frame className={styles.frame} variant="well">
+            <small>This page is in development, feel free to send me suggestions!</small>
+          </Frame>
+        </Window>
+        <Window shadow={false} className={styles.window}>
+          <WindowHeader active={false}>
+            <span>Social</span>
           </WindowHeader>
           <Toolbar>
             <Button variant="menu" size="sm" disabled>
@@ -37,23 +64,16 @@ export default function Home() {
             </Button>
           </Toolbar>
           <WindowContent>
-            <h1>Milene Toazza</h1>
-            <br />
-            <p>Frontend Developer from Brazil since 2018</p>
-            <p>Software Engineer student (2020 - 2024)</p>
-            <br />
-            <GroupBox label='Social'>
+            <GroupBox label="Social">
               <ul>
                 <li>
-                  <a href="https://github.com/mihtoa"> My GitHub</a>
+                  <a target="_blank" href="https://github.com/mihtoa" rel="noreferrer">GitHub</a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/mihtoa/">My LinkedIn</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/mihtoa/" rel="noreferrer">LinkedIn</a>
                 </li>
               </ul>
             </GroupBox>
-            <br />
-            <small>This page is in development, feel free to send me suggestions!</small>
           </WindowContent>
         </Window>
         <SystemBar />

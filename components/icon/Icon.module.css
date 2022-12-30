@@ -3,6 +3,10 @@
   color: white;
 }
 
+.figcaption {
+  white-space: nowrap;
+}
+
 .image {
   margin: 0 auto;
   pointer-events: none;

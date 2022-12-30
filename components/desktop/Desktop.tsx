@@ -1,4 +1,4 @@
-import styles from './desktop.module.css'
+import styles from './Desktop.module.css'
 
 type Props = {
   children?: JSX.Element

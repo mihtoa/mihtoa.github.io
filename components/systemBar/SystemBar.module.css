@@ -6,6 +6,7 @@
   left: 0;
   bottom: 0;
   box-shadow: #f7f7f7 inset 0px 3px 1px;
+  padding: 4px;
 }
 
 .image {

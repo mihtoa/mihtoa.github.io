@@ -1,0 +1,32 @@
+.notepad {
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  left: 30%;
+  transform: translateY(40%);
+}
+
+.window {
+  width: 100%;
+  max-width: 200px;
+  min-height: 200px;
+  left: 32%;
+  transform: translateY(100%);
+}
+
+.frame {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .notepad {
+    width: 80%;
+    left: 10%;
+    transform: translateY(30%);
+  }
+
+  .window {
+    left: 5%;
+    transform: translateY(50%);
+  }
+}

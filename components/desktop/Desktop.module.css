@@ -14,5 +14,6 @@
   display: grid;
   grid-template-columns: min-content;
   grid-template-rows: min-content;
+  align-items: flex-start;
   grid-gap: 1rem;
 }
