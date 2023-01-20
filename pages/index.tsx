@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import Head from 'next/head'
 import { Button, Frame, GroupBox, Window, WindowHeader, WindowContent, TextInput, Toolbar } from 'react95'
 
@@ -8,6 +9,13 @@ import Icon from 'components/icon'
 import styles from './Home.module.css'
 
 export default function Home() {
+  const TextInputRef: React.MutableRefObject<HTMLTextAreaElement | null> = useRef(null)
+
+  useEffect(() => {
+    TextInputRef.current?.focus()
+    TextInputRef.current?.setSelectionRange(TextInputRef.current?.value.length, TextInputRef.current?.value.length)
+  })
+
   return (
     <>
       <Head>
@@ -41,8 +49,9 @@ export default function Home() {
           <TextInput
             multiline
             rows={6}
-            defaultValue={`Milene Toazza\nFrontend Developer from Brazil since 2018\nSoftware Engineer student (2020 - 2024)\n\nText here!`}
+            defaultValue={`Milene Toazza\nFrontend Developer from Brazil since 2018\nSoftware Engineer student (2020 - 2024)\n\nText here! `}
             fullWidth
+            ref={TextInputRef}
           />
           <Frame className={styles.frame} variant="well">
             <small>This page is in development, feel free to send me suggestions!</small>

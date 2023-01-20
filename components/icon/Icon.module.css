@@ -1,6 +1,13 @@
+.button {
+  cursor: move;
+  transform-origin: center;
+  z-index: 0;
+}
+
 .figure {
   width: 80px;
   color: white;
+  pointer-events: none;
 }
 
 .figcaption {
@@ -11,4 +18,13 @@
   margin: 0 auto;
   pointer-events: none;
   margin-bottom: 5px;
+}
+
+.selected .figure .image {
+  filter: invert(0%) sepia(0%) saturate(150%) hue-rotate(106deg) brightness(75%) contrast(100%);
+}
+
+.selected .figure .figcaption {
+  background-color: #060083;
+  border: 1px dashed white;
 }

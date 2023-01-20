@@ -5,7 +5,11 @@ type Props = {
 };
 
 export default function Desktop({ children }: Props) {
+  const onDragOver: React.DragEventHandler<HTMLDivElement> = (event) => {
+    event.dataTransfer.dropEffect = 'move'
+  }
+
   return (
-    <div className={styles.desktop}>{children && (children)}</div>
+    <div className={styles.desktop} onDragOver={onDragOver}>{children && (children)}</div>
   );
 }
