@@ -1,4 +1,1 @@
-
-import SystemBar from './SystemBar'
-
-export default SystemBar
+export * from './SystemBar';

@@ -1,0 +1,21 @@
+.close {
+  position: absolute;
+  inset: 2px 2px 2px auto;
+  width: 30px;
+}
+
+.close > button {
+  position: absolute;
+  inset: 0 0 auto auto;
+  height: 100% !important;
+  width: 100% !important;
+  padding-bottom: 3px;
+  line-height: 1;
+  font-size: 1.4rem;
+  font-family: initial;
+  line-height: 0;
+}
+
+div:has(> .close) {
+  position: relative;
+}

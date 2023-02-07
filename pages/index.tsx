@@ -1,26 +1,41 @@
-import { useRef, useEffect } from 'react'
-import Head from 'next/head'
-import { Button, Frame, GroupBox, Window, WindowHeader, WindowContent, TextInput, Toolbar } from 'react95'
+import { useRef, useEffect } from 'react';
+import Head from 'next/head';
+import {
+  Button,
+  Frame,
+  GroupBox,
+  Window,
+  WindowHeader,
+  WindowContent,
+  TextInput,
+  Toolbar,
+} from 'react95';
 
-import SystemBar from 'components/systemBar'
-import Desktop from 'components/desktop'
-import Icon from 'components/icon'
+import { Profile } from 'data';
 
-import styles from './Home.module.css'
+import { Close, Desktop, Icon, SystemBar } from 'components';
+
+import styles from './Home.module.css';
 
 export default function Home() {
-  const TextInputRef: React.MutableRefObject<HTMLTextAreaElement | null> = useRef(null)
+  const title = Profile.name + ' | ' + Profile.role;
+
+  const TextInputRef: React.MutableRefObject<HTMLTextAreaElement | null> =
+    useRef(null);
 
   useEffect(() => {
-    TextInputRef.current?.focus()
-    TextInputRef.current?.setSelectionRange(TextInputRef.current?.value.length, TextInputRef.current?.value.length)
-  })
+    TextInputRef.current?.focus();
+    TextInputRef.current?.setSelectionRange(
+      TextInputRef.current?.value.length,
+      TextInputRef.current?.value.length
+    );
+  });
 
   return (
     <>
       <Head>
-        <title>Milene Toazza | Frontend Developer</title>
-        <meta name="description" content="Milene Toazza | Frontend Developer" />
+        <title>{title}</title>
+        <meta name="description" content={title} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -34,6 +49,7 @@ export default function Home() {
         <Window shadow={false} className={styles.notepad}>
           <WindowHeader>
             <span>Resume - Notepad</span>
+            <Close />
           </WindowHeader>
           <Toolbar>
             <Button variant="menu" size="sm" disabled>
@@ -49,44 +65,54 @@ export default function Home() {
           <TextInput
             multiline
             rows={6}
-            defaultValue={`Milene Toazza\nFrontend Developer from Brazil since 2018\nSoftware Engineer student (2020 - 2024)\n\nText here! `}
+            defaultValue={`${Profile.name}\n${Profile.description}\n\nText here! `}
             fullWidth
             ref={TextInputRef}
           />
           <Frame className={styles.frame} variant="well">
-            <small>This page is in development, feel free to send me suggestions!</small>
+            <small>
+              This page is in development, feel free to send me suggestions.
+            </small>
           </Frame>
         </Window>
-        <Window shadow={false} className={styles.window}>
-          <WindowHeader active={false}>
-            <span>Social</span>
-          </WindowHeader>
-          <Toolbar>
-            <Button variant="menu" size="sm" disabled>
-              File
-            </Button>
-            <Button variant="menu" size="sm" disabled>
-              Edit
-            </Button>
-            <Button variant="menu" size="sm" disabled>
-              Save
-            </Button>
-          </Toolbar>
-          <WindowContent>
-            <GroupBox label="Social">
-              <ul>
-                <li>
-                  <a target="_blank" href="https://github.com/mihtoa" rel="noreferrer">GitHub</a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://www.linkedin.com/in/mihtoa/" rel="noreferrer">LinkedIn</a>
-                </li>
-              </ul>
-            </GroupBox>
-          </WindowContent>
-        </Window>
+        {!!Profile?.social && (
+          <Window shadow={false} className={styles.window}>
+            <WindowHeader active={false}>
+              <span>Social</span>
+              <Close />
+            </WindowHeader>
+            <Toolbar>
+              <Button variant="menu" size="sm" disabled>
+                File
+              </Button>
+              <Button variant="menu" size="sm" disabled>
+                Edit
+              </Button>
+              <Button variant="menu" size="sm" disabled>
+                Save
+              </Button>
+            </Toolbar>
+            <WindowContent>
+              <GroupBox label="Social">
+                <ul>
+                  {Profile?.social?.map((social) => (
+                    <li key={social.title}>
+                      <a
+                        target={social.target}
+                        href={social.url}
+                        rel="noreferrer"
+                      >
+                        {social.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </GroupBox>
+            </WindowContent>
+          </Window>
+        )}
         <SystemBar />
       </main>
     </>
-  )
+  );
 }

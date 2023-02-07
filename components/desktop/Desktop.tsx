@@ -1,15 +1,17 @@
-import styles from './Desktop.module.css'
+import styles from './Desktop.module.css';
 
 type Props = {
-  children?: JSX.Element
+  children?: JSX.Element;
 };
 
-export default function Desktop({ children }: Props) {
+export function Desktop({ children }: Props) {
   const onDragOver: React.DragEventHandler<HTMLDivElement> = (event) => {
-    event.dataTransfer.dropEffect = 'move'
-  }
+    event.dataTransfer.dropEffect = 'move';
+  };
 
   return (
-    <div className={styles.desktop} onDragOver={onDragOver}>{children && (children)}</div>
+    <div className={styles.desktop} onDragOver={onDragOver}>
+      {children && children}
+    </div>
   );
 }
