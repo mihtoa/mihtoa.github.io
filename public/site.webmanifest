@@ -1,0 +1,19 @@
+{
+  "name": "Milene Toazza | Software Engineer | Frontend Developer",
+  "short_name": "Milene Toazza - Personal Site",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#D97777",
+  "background_color": "#FDFBF7",
+  "display": "standalone"
+}

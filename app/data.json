@@ -1,0 +1,25 @@
+{
+  "me": {
+    "greetings": "Hello!",
+    "description": [
+      "Hi! My name is Milene and I'm a Frontend Developer Specialist. My purpose is to transform ideas into high-quality digital products. With a professional journey that started in 2018, I am dedicated to building and evolving solutions, ensuring a great user experience backed by a solid, scalable, and secure technical foundation.",
+      "I am driven by continuous improvement and constantly seek to test and implement new technologies, tools, and patterns that optimize delivery and project longevity. I highly value feedback exchange as a driver of personal and collective growth.",
+      "Core Stack:",
+      "- JavaScript | TypeScript | React | React Native | Node",
+      "Key Principles:",
+      "- Accessibility | Scalability | Maintainability | Security | Quality"
+    ],
+    "socialLinks": [
+      {
+        "url": "https://www.linkedin.com/in/mihtoa/",
+        "label": "My LinkedIn",
+        "slug": "linkedin"
+      },
+      {
+        "url": "https://github.com/mihtoa",
+        "label": "My GitHub",
+        "slug": "github"
+      }
+    ]
+  }
+}
