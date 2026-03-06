@@ -2,7 +2,7 @@ import data from "../data.json";
 import TextWrapper from "../components/text-wrapper";
 import ContactCat from "../components/contact-cat";
 
-export default function Home() {
+export default function Contact() {
   return (
     <TextWrapper>
       <ContactCat />

@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const nextConfig: NextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/mihtoa.github.io' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/mihtoa.github.io' : '',
+  assetPrefix: basePath,
+  basePath,
   output: 'export',
   trailingSlash: true,
   images: {

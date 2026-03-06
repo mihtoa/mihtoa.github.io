@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
@@ -19,13 +20,13 @@ export default function Header() {
             const isActive = item.href !== "#" && pathname === item.href;
             return (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   style={isActive ? { color: "var(--color-red)" } : { color: "inherit" }}
                   className="transition-colors duration-200 no-underline"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             );
           })}
