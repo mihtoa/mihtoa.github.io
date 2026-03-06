@@ -11,8 +11,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Milene Toazza - Engenheira de Software | Desenvolvedora Frontend",
-  description: "Portfólio de Milene Toazza, engenheira de software especializada em desenvolvimento frontend.",
+  title: "Milene Toazza | Software Engineer | Frontend Developer",
+  description: "Milene Toazza personal site, a software engineer specialized in frontend development.",
 };
 
 export default function RootLayout({
