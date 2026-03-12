@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   assetPrefix: basePath,
   basePath,
   output: 'export',
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     unoptimized: true,
   },
