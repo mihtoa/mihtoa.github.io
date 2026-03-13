@@ -6,9 +6,9 @@ export default function AboutCat() {
   const [eyePos, setEyePos] = useState<{ left: { x: number; y: number }; right: { x: number; y: number } }>({ left: { x: 0, y: 0 }, right: { x: 0, y: 0 } });
   const svgRef = useRef<SVGSVGElement | null>(null);
 
-  const leftEyeCenter = { x: 1355, y: 740 };
-  const rightEyeCenter = { x: 1517, y: 740 };
-  const eyeRadius = 35;
+  const leftEyeCenter = { x: 1353, y: 737 };
+  const rightEyeCenter = { x: 1518, y: 737 };
+  const eyeRadius = 30;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -59,16 +59,18 @@ export default function AboutCat() {
       width="200"
       viewBox="350 0 1300 2000"
     >
-      <circle
+      <ellipse
         cx={eyePos.left.x || leftEyeCenter.x}
         cy={eyePos.left.y || leftEyeCenter.y}
-        r={eyeRadius / 2}
+        rx={eyeRadius * 0.4 * 0.9}
+        ry={eyeRadius * 0.9}
         fill="var(--color-red)"
       />
-      <circle
+      <ellipse
         cx={eyePos.right.x || rightEyeCenter.x}
         cy={eyePos.right.y || rightEyeCenter.y}
-        r={eyeRadius / 2}
+        rx={eyeRadius * 0.4 * 1.1}
+        ry={eyeRadius}
         fill="var(--color-red)"
       />
       <path fill="var(--color-red)" d="M723.284782,1639.6537c30.285599,41.8356,6.2528-113.4677,18.4248-125.1732,87.686419-272.7713,141.634419-557.9073,153.761996-844.3917-.6668-6.8528,3.356-19.8696-6.7268-20.7364-3.4892.0296-6.7712,3.082-6.578778,6.69.533578,10.0012-.014822,19.9508-.592422,29.9224-14.3208,195.998-43.569199,390.7508-91.168398,581.4812-18.9064,80.5745-40.10918,160.6817-66.320398,239.2113-6.578782,12.3796-6.200782,25.9516-5.7712,39.598.8892,31.1747.348418,62.4904,4.9712,93.3984Z"/>

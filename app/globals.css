@@ -38,7 +38,7 @@ body {
   background: linear-gradient(var(--background) 50%, transparent 50%);
 }
 
-.negative-border-right::before {
+.negative-border::before {
   content: '';
   position: absolute;
   left: -20px;
@@ -50,7 +50,7 @@ body {
   box-shadow: 10px -10px 0 0 var(--background);
 }
 
-.negative-border-right::after {
+.negative-border::after {
   content: '';
   position: absolute;
   right: -20px;
@@ -61,3 +61,14 @@ body {
   border-radius: 20px 0 0 25px;
   box-shadow: -10px -10px 0 0 var(--background);
 }
+
+.cat-eyelid {
+  opacity: 0;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 95%, 100% { opacity: 0; }
+  97% { opacity: 1; }
+}
+

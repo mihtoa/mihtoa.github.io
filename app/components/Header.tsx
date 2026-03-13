@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="header flex w-full justify-center sticky top-0 z-10">
-      <nav className="p-3 pr-6 pl-6 bg-white relative rounded-2xl negative-border-right">
+      <nav className="p-3 pr-6 pl-6 bg-white relative rounded-2xl negative-border">
         <ul className="flex gap-4 list-none m-0 p-0 relative">
           {navItems.map((item) => {
             const isActive = item.href !== "#" && pathname === item.href;
