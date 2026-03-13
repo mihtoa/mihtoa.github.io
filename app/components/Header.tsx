@@ -22,7 +22,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  style={isActive ? { color: "var(--color-red)" } : { color: "inherit" }}
+                  style={isActive ? { color: "var(--color-red)" } : {}}
                   className="transition-colors duration-200 no-underline"
                 >
                   {item.name}
